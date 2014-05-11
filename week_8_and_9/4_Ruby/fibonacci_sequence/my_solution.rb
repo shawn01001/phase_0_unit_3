@@ -10,7 +10,18 @@
 # 3. Initial Solution
 
 def is_fibonacci?(num)
-
+  fibonacci = [0,1]
+  
+  return true if num <= 1
+  
+  if num > fibonacci.last do
+    x, y = fibonacci.pop(2)
+    fibonacci.push(y, x + y)
+  end
+  
+  num == fibonacci.last ? true : false
+end
+  
 end
 
 
